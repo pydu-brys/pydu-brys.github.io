@@ -5,42 +5,111 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      position: fixed;
-      width: 100%;
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #000000;
+    color: #F0FFFF;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .navbar-brand{
+    float: left;
+    min-height: 55px;
+    padding: 0 10px 5px;
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a: focus, .navbar-inverse .navbar-nav .active a: hover{
+    color: #FFF;
+    background-color: : #000000;
+  }
+  .navbar-inverse .navbar-nav li a {
+    color: #D5D5D5
+  }
+
+  .carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    font-family:courier;
+  }
+  .btn{
+    font-size: 18px;
+    color: #000000;
+    padding: 8px 22px;
+    background: #D5D5D5;
+    border: 2px solid #FFF;
+    font-family:courier;
+  }
+
+  .container{
+    margin: 4% auto;
+    font-family:courier
+  }
+
+  #icon {
+    max-width: 200px;
+    margin: 1% auto;
+  }
+  footer{
+    width: 100%;
+    background-color: #000000;
+    color: #F0FFFF;
+    padding: 1% 0;
+    font-family:courier;
+
+  }
+  .fa{
+    padding: 20px;
+    font-size: 30px;
+    color: #FFF;
+  }
+
+  .fa:hover {
+    color: #D5D5D5;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px){
+    .carousel-caption {
+      display: none;
     }
 
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
+    #icon{
+      max-width: 150px;
     }
+    h4{
+      font-size: 90%;
+    }
+  }
   </style>
-</head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
+
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <b><a style="font-family:courier;" class="navbar-brand" href="#">Pydu</a></b>
+
+      <b><a class="navbar-brand" href="#" style="font-family:courier;" >Pydu</a></b>
     </div>
+
+
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li style="font-family:courier;" class="active"><a href="#home">Home</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li style="font-family:courier;" class="active"><a href="#myCarousel">Home</a></li>
         <li style="font-family:courier;"><a href="#about">About</a></li>
         <li style="font-family:courier;"><a href="#projects">Projects</a></li>
-        <li style="font-family:courier;"><a href="#">Contact</a></li>
+        <li style="font-family:courier;"><a href="#contact">Contact</a></li>
         <li style="font-family:courier;"><a href="https://github.com/pydu-brys">Github</a></li>
       </ul>
 
@@ -48,71 +117,175 @@
   </div>
 </nav>
 
+<div id="myCarousel" class = "carousel slide" data-ride = "carousel">
+  <ol class = "carousel-indicators">
+    <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+    <li data-target = "#myCarousel" data-slide-to = "1"></li>
+    <li data-target = "#myCarousel" data-slide-to = "2"></li>
+  </ol>
+  <div class = "carousel-inner" role = "listbox">
+    <div class = "item active">
+      <img src = "fig/Vegas_Night.jpg">
+      <div class = "carousel-caption">
+        <br>
+        <br>
+        <br>
+        <h1>Portfolio: Po-Yi Du</h1>
+        <!---
+        <a href = "#about"><button type = "button" class = "btn bt-default">About me</button></a>
+        --->
+      </div>
+    </div><!--- End Active--->
+    <div class = "item">
+      <img src = "fig/food.jpg">
+      <div class = "carousel-caption">
+        <br>
+        <br>
+        <br>
+        <h1>Portfolio: Po-Yi Du</h1>
+        <!---
+        <a href = "#projects"><button type = "button" class = "btn bt-default">See My Projects</button></a>
+        --->
+      </div>
 
-<section class="page-header" id = "home">
-  <h1 style="font-family:courier;" color = "white"><b>Po-Yi Du</b></h1>
-  <p style="font-family:courier;" color = "white">Not your ordinary data scientist</p>
-  <style type = "text/css">
-      .page-header {
-      background-image:url("../fig/Vegas_Night(Trimmed).jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: #E0E0E0;
-      text-shadow: 0px 0px 4px #9999ff;
-      }
-  </style>
-</section>
-
-
-<section class = "main-content" id ="about">
-  <h3>About Me</h3><br>
-  <div class = "section group">
-    <div class = "col span_2_left">
-      <figure>
-        <img src = "../fig/Po-Yi Du Photo2.jpg" width = "360" height = "480" >
-        <figcaption><font size = "1"><i>Me at Ed Shareen and James Blunt concert at Glendale, Arizona</i></font></figcaption>
-      </figure>
     </div>
+    <div class = "item">
+      <img src = "fig/cocktail.jpg">
+      <div class = "carousel-caption">
+        <br>
+        <br>
+        <br>
+        <h1>Portfolio: Po-Yi Du</h1>
+        <!---
+        <a href = "#contact"><button type = "button" class = "btn bt-default">Contact Me</button></a>
+        --->
+      </div>
 
-    <div class = "col span_2_right">
-      <p>
-        "My name is Po-Yi Du (Bryce). I am currently a graduate student majoring in "
-        <a href="https://msmis.eller.arizona.edu/"> Management Information System </a>
-        "at the University of Arizona. I am also a research assistant at "
-        <a href="https://ai.arizona.edu/">the Artificial Intelligence Lab</a>
-        " where is directed by "
-        <a href="https://ai.arizona.edu/about/director">Dr. Hsinchun Chen</a>
+    </div>
+  </div>
+  <!--- Start Slider Controls -->
+  <a class = "left carousel-control" href = "#myCarousel" role = "button" data-slide = "prev">
+    <span class = "glyphicon glyphicon-chevron-left" aria-hidden = "true"></span>
+    <span class = "sr-only">Previous</span>
+  </a>
+
+  <a class = "right carousel-control" href = "#myCarousel" role = "button" data-slide = "next">
+    <span class = "glyphicon glyphicon-chevron-right" aria-hidden = "true"></span>
+    <span class = "sr-only">Next</span>
+  </a>
+</div> <!--- End Slider --->
+
+<div class = "container" id = "about">
+  <div class = "row">
+    <div class = "col-md-6">
+      <br>
+      <br>
+      <img src = "fig/horseshoebend.jpg" class = "img-responsive">
+    </div>
+    <div class = "col-md-6">
+      <h4><b>My name is Po-Yi Du, you can also call me Bryce.</b></h4>
+      <p>   I am currently a research track graduate student majoring in
+            <a href="https://msmis.eller.arizona.edu/"> Management Information Systems
+            at the University of Arizona</a>. I am a research assistant at
+            <a href="https://ai.arizona.edu/">the Artificial Intelligence Lab</a>
+             directed by
+            <a href="https://ai.arizona.edu/about/director">Dr. Hsinchun Chen</a>
+            , who is also the advisor for my master project. To know more about me,
+            here is my <a href = "#">resume</a>, or you can <a href = "#contact">contact</a> me.
       </p>
     </div>
+
+    <div class = "col-lg-1 col-md-1 col-sm-6 col-xs-12">
+      <br>
+      <br>
+      <img src = "fig/ncku.png" class = "img-responsive">
+    </div>
+    <div class = "col-lg-5 col-md-5 col-sm-6 col-xs-12">
+      <h4><b>About my data science training,</b></h4>
+      <p>
+        I graduated from National Cheng Kung University
+        with statistics as my major. In my senior year,
+        I finished my first analytic project,
+        <a href = "#">Dialysis: Long-term Pattern Analysis</a>.
+      </p>
+
+    </div>
+    <div class = "col-lg-1 col-md-1 col-sm-6 col-xs-12">
+      <br>
+      <br>
+      <img src = "fig/uofa.jpg" class = "img-responsive">
+    </div>
+    <div class = "col-lg-5 col-md-5 col-sm-6 col-xs-12">
+      <p>
+        I chose MIS as my graduate major to have more exposure of data analytics applications,
+        while strengthening my analytics skills in the AI Lab, one of the most analytical labs in MIS.
+      </p>
+      <p>
+        Under Dr. Chen's guidance,
+        I have been learning machine learning and artificial intelligence techniques,
+        and applying my skills on <a href = "#">various domains</a>.
+      </p>
+    </div>
+
+
+    <div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <h4><b>Besides data science,</b></h4>
+      <p>
+        I also like to travel, sing, and cook, cooking especially.
+        I like to cood not only because I am a foodie, but because cooking, to me,
+        is a stress-easing process (while not failing of course).
+      </p>
+      <p>
+        Cooking is also a good realization of design of experiment,
+        and a good course of courage (when failing).
+      </p>
+    </div>
+    <div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <br>
+      <img src = "fig/foods.jpg" class = "img-responsive">
+    </div>
   </div>
-<section/>
-
-
-<div class="container-fluid bg-3 text-center" id = "projects">
-  <h3>Projects</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Social Media Analysis: Nanotechnology Development
-        (Under development)</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+</div>
+<!--- Project --->
+<div class = "container text-center" id = "projects">
+  <h2><b>My Projects</b></h2>
+  <div class = "row">
+    <div class = "col-sm-4">
+      <img src = "aa" alt = "pjt1" id = "icon">
+      <h4><b>pjt1</b></h4>
     </div>
-    <div class="col-sm-4">
-      <p>Virtual CPU: Register/ Memory Exchange Simulator
-        (Finished)</p>
-      <a href="https://github.com/pydu-brys/VirtualCPU"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+    <div class = "col-sm-4">
+      <img src = "aa" alt = "pjt2" id = "icon">
+      <h4><b>pjt2</b></h4>
     </div>
-    <div class="col-sm-4">
-      <p>Dialysis: Long-term Pattern Analysis
-        (Finished)</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class = "col-sm-4">
+      <img src = "aa" alt = "pjt3" id = "icon">
+      <h4><b>pjt3</b></h4>
     </div>
   </div>
-</div><br>
+</div>
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class = "container-fluid text-center" id = "contact">
+  <div class = "row">
+    <div class = "col-sm-6">
+      <h3><b>Contact me at</b><h3>
+      <a href = "#" class = "fa fa-envelope"></a>
+      <a href = "#" class = "fa fa-linkedin"></a>
+      <a href = "#" class = "fa fa-github"></a>
+    </div>
+    <div class = "col-sm-6">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h5>This portfolio page is created by
+        <a href = "#myNavbar"> Po-Yi Du </a>
+        with the reference to
+        <a href = "https://www.youtube.com/watch?v=eIWRbvE1B2E">Drew Ryan</a>
+      </h5>
+    </div>
+  </div>
 </footer>
-
 </body>
 </html>
