@@ -4,11 +4,15 @@
   <title>Portfolio: Po-Yi Du</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  h1, h2, h3, h4, h5{
+    font-family:courier;
+  }
   .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -22,8 +26,7 @@
   }
   .navbar-brand{
     float: left;
-    min-height: 55px;
-    padding: 0 10px 5px;
+
   }
   .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a: focus, .navbar-inverse .navbar-nav .active a: hover{
     color: #FFF;
@@ -51,6 +54,54 @@
     margin: 4% auto;
     font-family:courier
   }
+  .container_overlay{
+    margin: 4% auto;
+    font-family:courier;
+    position: relative;
+    width: 100%;
+    color: #8c8c8c
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+  }
+
+  .container_overlay:hover h1{
+    color: white;
+    opacity: 1;
+  }
+  .container_overlay:hover h2{
+    color: white;
+    opacity: 1;
+  }
+  .container_overlay:hover h3{
+    color: white;
+    opacity: 1;
+  }
+  .container_overlay:hover h4{
+    color: white;
+    opacity: 1;
+  }
+
+  .container_overlay:hover .overlay {
+    opacity: .1;
+  }
+
+
+  a.ex1:hover, a.ex1:active {
+    color: white;
+    opacity: 1;
+  }
+
 
   #icon {
     max-width: 200px;
@@ -75,13 +126,15 @@
     text-decoration: none;
   }
 
+  #portfolio{
+    background-color : #333333;
+    color: #F0FFFF;;
+  }
 
   @media (max-width: 600px){
     .carousel-caption {
       top: 25%;
     }
-
-
     #icon{
       max-width: 150px;
     }
@@ -132,7 +185,7 @@
         <br>
         <br>
         <br>
-        <h1>Portfolio: Po-Yi Du</h1>
+        <h1 style="font-family:courier;">Portfolio: Po-Yi Du</h1>
         <!---
         <a href = "#about"><button type = "button" class = "btn bt-default">About me</button></a>
         --->
@@ -177,8 +230,13 @@
   </a>
 </div> <!--- End Slider --->
 
-<div class = "container" id = "about">
+<div class = "container text-center" id = "about">
+  <br>
+  <br>
+  <br>
+  <br>
   <div class = "row">
+    <h1><b> About Me </b></h1>
     <div class = "col-md-6">
       <br>
       <br>
@@ -193,7 +251,7 @@
              directed by
             <a href="https://ai.arizona.edu/about/director">Dr. Hsinchun Chen</a>
             , who is also the advisor for my master project. To know more about me,
-            here is my <b><a href = "./Resume/resume.pdf">resume</a></b>, or you can <b><a href = "#contact">contact</a></b> me.
+            here is my <b><a href = "./doc/Resume/resume.pdf">resume</a></b>, or you can <b><a href = "#contact">contact</a></b> me.
       </p>
     </div>
 
@@ -208,7 +266,7 @@
         I graduated from National Cheng Kung University
         with statistics as my major. In my senior year,
         I finished my first analytic project,
-        <a href = "./Project/Dialysis.pdf">Dialysis: Long-term Pattern Analysis</a>.
+        <a href = "./doc/Project/Dialysis.pdf">Dialysis: Long-term Pattern Analysis</a>.
       </p>
 
     </div>
@@ -249,24 +307,81 @@
   </div>
 </div>
 <!--- Project --->
+<section class = "portfolio" id = "portfolio">
 <div class = "container text-center" id = "projects">
-  <h2><b>My Projects</b></h2>
+  <h2 ><b>My Projects</b></h2>
   <div class = "row">
-    <div class = "col-sm-4">
-      <img src = "aa" alt = "pjt1" id = "icon">
-      <h4><b>pjt1</b></h4>
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" href = "./doc/Project/Pokemon.pdf">
+        <div class = "container_overlay text-center">
+          <div class = "overlay">
+            <img src = "./fig/project cover/pokemongo_cover.png" class = "img-responsive">
+          </div>
+          <h3>PokémonGo: </h3>
+          <h4>Pokémon Spawning Prediction</h4>
+        </div>
+
+      </a>
     </div>
-    <div class = "col-sm-4">
-      <img src = "aa" alt = "pjt2" id = "icon">
-      <h4><b>pjt2</b></h4>
+
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" href = "./doc/Project/LeagueOfLegend.pdf">
+        <div class = "container_overlay text-center">
+          <div class = "overlay">
+            <img src = "./fig/project cover/lol_cover.png" class = "img-responsive">
+          </div>
+          <h3>League of Legends: </h3>
+          <h4>Social Media Network Analysis</h4>
+        </div>
+
+      </a>
     </div>
-    <div class = "col-sm-4">
-      <img src = "aa" alt = "pjt3" id = "icon">
-      <h4><b>pjt3</b></h4>
+
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" href = "./doc/Project/Stock.pdf">
+        <div class = "container_overlay text-center">
+          <div class = "overlay">
+            <img src = "./fig/project cover/quandl_cover.png" class = "img-responsive">
+          </div>
+          <h3>US Stock: </h3>
+          <h4>Stock Trend Prediction</h4>
+        </div>
+
+      </a>
     </div>
+
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" href = "./doc/Project/Dialysis.pdf">
+        <div class = "container_overlay text-center" >
+          <div class = "overlay">
+            <img src = "./fig/project cover/Dialysis_cover.png" class = "img-responsive text-center">
+          </div>
+          <h3>Dialysis: </h3>
+          <h4>Long-term Pattern Analysis</h4>
+        </div>
+
+      </a>
+    </div>
+
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" href = "https://github.com/pydu-brys/VirtualCPU">
+        <div class = "container_overlay text-center" >
+          <div class = "overlay">
+            <img src = "./fig/project cover/computerscience_cover.png" class = "img-responsive text-center">
+          </div>
+          <h3>Computer Architecture:</h3>
+          <h4>CPU Simulator</h4>
+        </div>
+
+      </a>
+    </div>
+
   </div>
 </div>
+<br>
 
+
+</section>
 
 <footer class = "container-fluid text-center" id = "contact">
   <div class = "row">
