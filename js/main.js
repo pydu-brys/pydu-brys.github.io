@@ -1,0 +1,183 @@
+//navbar animation
+$(window).scroll(function(){
+  if($(document).scrollTop() > 600){
+    $('nav').addClass('shrink');
+  }
+  else{
+    $('nav').removeClass('shrink');
+  }
+});
+
+//smooth scroll animation
+$(document).ready(function(){
+  $('a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+    var target = this.hash;
+    var $target = $(target);
+
+    //Scroll and show hash
+    $('html, body').animate({
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing', function(){
+      window.location.hash = target;
+    });
+  });
+});
+
+
+//MODALS
+//pokemonmodal
+// get modal element
+var pokemonmodal = document.getElementById('pokemonModal');
+// get modal button
+var pokemon = document.getElementById('pokemon');
+//get close button
+var pokeCloseBtn = document.getElementsByClassName('closeBtn')[0];
+
+//listen for a click
+pokemon.addEventListener('click', pokeOpenModal);
+//Listen for close click
+pokeCloseBtn.addEventListener('click', pokeCloseModal);
+//Listen for outside click
+window.addEventListener('click', pokeClickOutside);
+
+//Function to open open modal
+function pokeOpenModal(){
+  pokemonmodal.style.display = 'block';
+}
+
+function pokeCloseModal(){
+  pokemonModal.style.display = 'none'
+}
+
+function pokeClickOutside(e){
+  if(e.target == pokemonmodal){
+    pokemonModal.style.display = 'none'
+  }
+
+}
+
+
+//lolmodal
+// get modal element
+var lolmodal = document.getElementById('lolModal');
+// get modal button
+var lol = document.getElementById('lol');
+//get close button
+var loCloseBtn = document.getElementsByClassName('closeBtn')[1];
+
+//listen for a click
+lol.addEventListener('click', lolOpenModal);
+//Listen for close click
+loCloseBtn.addEventListener('click', lolCloseModal);
+//Listen for outside click
+window.addEventListener('click', lolClickOutside);
+
+//Function to open open modal
+function lolOpenModal(){
+  lolmodal.style.display = 'block';
+}
+
+function lolCloseModal(){
+  lolModal.style.display = 'none'
+}
+
+function lolClickOutside(e){
+  if(e.target == lolmodal){
+    lolModal.style.display = 'none'
+  }
+
+}
+
+//stockmodal
+// get modal element
+var stockmodal = document.getElementById('stockModal');
+// get modal button
+var stock = document.getElementById('stock');
+//get close button
+var loCloseBtn = document.getElementsByClassName('closeBtn')[2];
+
+//listen for a click
+stock.addEventListener('click', stockOpenModal);
+//Listen for close click
+loCloseBtn.addEventListener('click', stockCloseModal);
+//Listen for outside click
+window.addEventListener('click', stockClickOutside);
+
+//Function to open open modal
+function stockOpenModal(){
+  stockmodal.style.display = 'block';
+}
+
+function stockCloseModal(){
+  stockModal.style.display = 'none'
+}
+
+function stockClickOutside(e){
+  if(e.target == stockmodal){
+    stockModal.style.display = 'none'
+  }
+
+}
+
+//dialysismodal
+// get modal element
+var dialysismodal = document.getElementById('dialysisModal');
+// get modal button
+var dialysis = document.getElementById('dialysis');
+//get close button
+var loCloseBtn = document.getElementsByClassName('closeBtn')[3];
+
+//listen for a click
+dialysis.addEventListener('click', dialysisOpenModal);
+//Listen for close click
+loCloseBtn.addEventListener('click', dialysisCloseModal);
+//Listen for outside click
+window.addEventListener('click', dialysisClickOutside);
+
+//Function to open open modal
+function dialysisOpenModal(){
+  dialysismodal.style.display = 'block';
+}
+
+function dialysisCloseModal(){
+  dialysisModal.style.display = 'none'
+}
+
+function dialysisClickOutside(e){
+  if(e.target == dialysismodal){
+    dialysisModal.style.display = 'none'
+  }
+
+}
+
+//cpumodal
+// get modal element
+var cpumodal = document.getElementById('cpuModal');
+// get modal button
+var cpu = document.getElementById('cpu');
+//get close button
+var loCloseBtn = document.getElementsByClassName('closeBtn')[4];
+
+//listen for a click
+cpu.addEventListener('click', cpuOpenModal);
+//Listen for close click
+loCloseBtn.addEventListener('click', cpuCloseModal);
+//Listen for outside click
+window.addEventListener('click', cpuClickOutside);
+
+//Function to open open modal
+function cpuOpenModal(){
+  cpumodal.style.display = 'block';
+}
+
+function cpuCloseModal(){
+  cpuModal.style.display = 'none'
+}
+
+function cpuClickOutside(e){
+  if(e.target == cpumodal){
+    cpuModal.style.display = 'none'
+  }
+
+}

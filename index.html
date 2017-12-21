@@ -7,8 +7,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" href = "./css/style.css">
+
   <style>
   h1, h2, h3, h4, h5{
     font-family:courier;
@@ -16,7 +16,8 @@
   .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #000000;
+    background-color: black;
+    opacity: .7;
     color: #F0FFFF;
     padding: 1% 0;
     font-size: 1.2em;
@@ -24,6 +25,20 @@
     position: fixed;
     width: 100%;
   }
+
+.navbar.shrink{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: black;
+  opacity: 1;
+  color: #F0FFFF;
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0;
+  position: fixed;
+  width: 100%;
+}
+
   .navbar-brand{
     float: left;
 
@@ -31,6 +46,7 @@
   .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a: focus, .navbar-inverse .navbar-nav .active a: hover{
     color: #FFF;
     background-color: : #000000;
+    opacity: 1;
   }
   .navbar-inverse .navbar-nav li a {
     color: #D5D5D5
@@ -78,28 +94,35 @@
   .container_overlay:hover h1{
     color: white;
     opacity: 1;
+    text-decoration: none;
   }
   .container_overlay:hover h2{
     color: white;
     opacity: 1;
+    text-decoration: none;
   }
   .container_overlay:hover h3{
     color: white;
     opacity: 1;
+    text-decoration: none;
   }
   .container_overlay:hover h4{
     color: white;
     opacity: 1;
+    text-decoration: none;
   }
 
   .container_overlay:hover .overlay {
     opacity: .1;
+    text-decoration: none;
+    cursor: pointer;
   }
 
 
   a.ex1:hover, a.ex1:active {
     color: white;
     opacity: 1;
+    text-decoration: none;
   }
 
 
@@ -171,6 +194,8 @@
     </div>
   </div>
 </nav>
+
+
 
 <div id="myCarousel" class = "carousel slide" data-ride = "carousel">
   <ol class = "carousel-indicators">
@@ -316,7 +341,7 @@
   <h2 ><b>My Projects</b></h2>
   <div class = "row">
     <div class = "col-md-6 col-lg-4 col-sm-4">
-      <a class = "ex1" href = "./doc/Project/Pokemon.pdf">
+      <a class = "ex1" id = "pokemon">
         <div class = "container_overlay text-center">
           <div class = "overlay">
             <img src = "./fig/project cover/pokemongo_cover.png" class = "img-responsive">
@@ -328,8 +353,27 @@
       </a>
     </div>
 
+    <div id = "pokemonModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>PokémonGo: </h2>
+          <h3>Pokémon Spawning Prediction</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "./doc/Project/Pokemon.pdf">
+          <div class = "modal-footer text-center">
+            <h3>Download PDF</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
     <div class = "col-md-6 col-lg-4 col-sm-4">
-      <a class = "ex1" href = "./doc/Project/LeagueOfLegend.pptx">
+      <a class = "ex1" id = "lol">
         <div class = "container_overlay text-center">
           <div class = "overlay">
             <img src = "./fig/project cover/lol_cover.png" class = "img-responsive">
@@ -341,8 +385,27 @@
       </a>
     </div>
 
+    <div id = "lolModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>League of Legends: </h2>
+          <h3>Social Media Network Analysis</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "./doc/Project/LeagueOfLegend.pptx">
+          <div class = "modal-footer text-center">
+            <h3>Download pptx Slides</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
     <div class = "col-md-6 col-lg-4 col-sm-4">
-      <a class = "ex1" href = "./doc/Project/Stock.pdf">
+      <a class = "ex1" id = "stock">
         <div class = "container_overlay text-center">
           <div class = "overlay">
             <img src = "https://pydu-brys.github.io/fig/project%20cover/Quandl_cover.png" class = "img-responsive">
@@ -354,8 +417,26 @@
       </a>
     </div>
 
+    <div id = "stockModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>US Stock: </h2>
+          <h3>Stock Trend Prediction</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "./doc/Project/Stock.pdf">
+          <div class = "modal-footer text-center">
+            <h3>Download PDF</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <div class = "col-md-6 col-lg-4 col-sm-4">
-      <a class = "ex1" href = "./doc/Project/Dialysis.pdf">
+      <a class = "ex1" id = "dialysis">
         <div class = "container_overlay text-center" >
           <div class = "overlay">
             <img src = "./fig/project cover/Dialysis_cover.png" class = "img-responsive text-center">
@@ -367,8 +448,26 @@
       </a>
     </div>
 
+    <div id = "dialysisModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>Dialysis: </h2>
+          <h3>Long-term Pattern Analysis</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "./doc/Project/Dialysis.pdf">
+          <div class = "modal-footer text-center">
+            <h3>Download PDF</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <div class = "col-md-6 col-lg-4 col-sm-4">
-      <a class = "ex1" href = "https://github.com/pydu-brys/VirtualCPU">
+      <a class = "ex1" id = "cpu">
         <div class = "container_overlay text-center" >
           <div class = "overlay">
             <img src = "./fig/project cover/computerscience_cover.png" class = "img-responsive text-center">
@@ -379,6 +478,25 @@
 
       </a>
     </div>
+
+    <div id = "cpuModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>Computer Architecture: </h2>
+          <h3>CPU Simulator</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "https://github.com/pydu-brys/VirtualCPU">
+          <div class = "modal-footer text-center">
+            <h3>Go to GitHub</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
 
   </div>
 </div>
@@ -406,6 +524,16 @@
       </h5>
     </div>
   </div>
+
+
+
+
 </footer>
+
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = "./js/jquery.js"></script>
+<script src = "./js/main.js"></script>
 </html>
