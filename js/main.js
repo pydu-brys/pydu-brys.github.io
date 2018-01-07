@@ -181,3 +181,34 @@ function cpuClickOutside(e){
   }
 
 }
+
+//dbmodal
+// get modal element
+var dbmodal = document.getElementById('dbModal');
+// get modal button
+var db = document.getElementById('db');
+//get close button
+var loCloseBtn = document.getElementsByClassName('closeBtn')[5];
+
+//listen for a click
+db.addEventListener('click', dbOpenModal);
+//Listen for close click
+loCloseBtn.addEventListener('click', dbCloseModal);
+//Listen for outside click
+window.addEventListener('click', dbClickOutside);
+
+//Function to open open modal
+function dbOpenModal(){
+  dbmodal.style.display = 'block';
+}
+
+function dbCloseModal(){
+  dbModal.style.display = 'none'
+}
+
+function dbClickOutside(e){
+  if(e.target == dbmodal){
+    dbModal.style.display = 'none'
+  }
+
+}

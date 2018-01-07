@@ -47,7 +47,11 @@ h1, h2, h3, h4, h5{
 }
 
 .navbar-brand{
+  padding: 0px;
+  margin: 0px;
+  vertical-align:top;
   float: left;
+  display:inline-block;
 
 }
 .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a: focus, .navbar-inverse .navbar-nav .active a: hover{
@@ -251,4 +255,8 @@ footer{
 @keyframes modalopen{
   from{opacity: 0}
   to{opacity: 1}
+}
+
+.devicon-python-plain {
+  font-size: 2rem
 }

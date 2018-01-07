@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel = "stylesheet" href = "./css/style.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 
   <style>
 
@@ -24,7 +26,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <b><a class="navbar-brand" href="#" style="font-family:courier;" >Pydu</a></b>
+      <a class="navbar-brand" href="#myCarousel" ><img src = "./fig/logo.png" height="52" width = "52"></a>
     </div>
 
 
@@ -192,7 +194,8 @@
           <div class = "overlay">
             <img src = "./fig/project cover/pokemongo_cover.png" class = "img-responsive">
           </div>
-          <h3>PokémonGo: </h3>
+          <h3><b>Data Analytics</b></h3>
+          <h4>PokémonGo: </h4>
           <h4>Pokémon Spawning Prediction</h4>
         </div>
 
@@ -207,7 +210,15 @@
           <h3>Pokémon Spawning Prediction</h3>
         </div>
         <div class = "modal-body">
-          <p>Description</p>
+          <p>
+            This is a group project for MIS 586 (Big Data Analytics) at the University of Arizona.
+            In this project, we aimed to explore the Pokémon spawning pattern with temporal and spatial
+            features, and co-occurrence behaviors with network metrics.
+          </p>
+          <p>
+            We later utilized those features and metrics to develop a C5.0 Decision Tree prediction model for
+            recommending the next most-likely spawned Pokémon for a given set of features.
+          </p>
         </div>
         <a href = "./doc/Project/Pokemon.pdf">
           <div class = "modal-footer text-center">
@@ -224,7 +235,8 @@
           <div class = "overlay">
             <img src = "./fig/project cover/lol_cover.png" class = "img-responsive">
           </div>
-          <h3>League of Legends: </h3>
+          <h3><b>Data Analytics</b></h3>
+          <h4>League of Legends: </h4>
           <h4>Social Media Network Analysis</h4>
         </div>
 
@@ -256,7 +268,8 @@
           <div class = "overlay">
             <img src = "https://pydu-brys.github.io/fig/project%20cover/Quandl_cover.png" class = "img-responsive">
           </div>
-          <h3>US Stock: </h3>
+          <h3><b>Data Analytics</b></h3>
+          <h4>US Stock: </h4>
           <h4>Stock Trend Prediction</h4>
         </div>
 
@@ -287,7 +300,8 @@
           <div class = "overlay">
             <img src = "./fig/project cover/Dialysis_cover.png" class = "img-responsive text-center">
           </div>
-          <h3>Dialysis: </h3>
+          <h3><b>Data Analytics</b></h3>
+          <h4>Dialysis: </h4>
           <h4>Long-term Pattern Analysis</h4>
         </div>
 
@@ -318,7 +332,7 @@
           <div class = "overlay">
             <img src = "./fig/project cover/computerscience_cover.png" class = "img-responsive text-center">
           </div>
-          <h3>Computer Architecture:</h3>
+          <h3><b>Computer Architecture: </b></h3>
           <h4>CPU Simulator</h4>
         </div>
 
@@ -338,6 +352,39 @@
         <a href = "https://github.com/pydu-brys/VirtualCPU">
           <div class = "modal-footer text-center">
             <h3>Go to GitHub</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class = "col-md-6 col-lg-4 col-sm-4">
+      <a class = "ex1" id = "db">
+        <div class = "container_overlay text-center" >
+          <div class = "overlay">
+            <img src = "./fig/project cover/db_cover.png" class = "img-responsive text-center">
+          </div>
+          <h3><b>Database Management: </b></h3>
+          <h4>C.A.T.S Project:</h4>
+          <h4>Room Reservation System<h4>
+        </div>
+
+      </a>
+    </div>
+
+    <div id = "dbModal" class = "modal">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <span class = "closeBtn">&times;</span>
+          <h2>C.A.T.S Project: </h2>
+          <h3>Room Reservation System</h3>
+        </div>
+        <div class = "modal-body">
+          <p>Description</p>
+        </div>
+        <a href = "./doc/Project/Booking DB System.pdf">
+          <div class = "modal-footer text-center">
+            <h3>Download PDF</h3>
           </div>
         </a>
       </div>
