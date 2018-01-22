@@ -64,12 +64,12 @@ var lolmodal = document.getElementById('lolModal');
 // get modal button
 var lol = document.getElementById('lol');
 //get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[1];
+var lolCloseBtn = document.getElementsByClassName('closeBtn')[1];
 
 //listen for a click
 lol.addEventListener('click', lolOpenModal);
 //Listen for close click
-loCloseBtn.addEventListener('click', lolCloseModal);
+lolCloseBtn.addEventListener('click', lolCloseModal);
 //Listen for outside click
 window.addEventListener('click', lolClickOutside);
 
@@ -89,18 +89,50 @@ function lolClickOutside(e){
 
 }
 
+//sdmodal
+// get modal element
+var sdmodal = document.getElementById('sdModal');
+// get modal button
+var sd = document.getElementById('sd');
+//get close button
+var sdCloseBtn = document.getElementsByClassName('closeBtn')[2];
+
+//listen for a click
+sd.addEventListener('click', sdOpenModal);
+//Listen for close click
+sdCloseBtn.addEventListener('click', sdCloseModal);
+//Listen for outside click
+window.addEventListener('click', sdClickOutside);
+
+//Function to open open modal
+function sdOpenModal(){
+  sdmodal.style.display = 'block';
+}
+
+function sdCloseModal(){
+  sdModal.style.display = 'none'
+}
+
+function sdClickOutside(e){
+  if(e.target == sdmodal){
+    sdModal.style.display = 'none'
+  }
+
+}
+
+
 //stockmodal
 // get modal element
 var stockmodal = document.getElementById('stockModal');
 // get modal button
 var stock = document.getElementById('stock');
 //get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[2];
+var stockCloseBtn = document.getElementsByClassName('closeBtn')[3];
 
 //listen for a click
 stock.addEventListener('click', stockOpenModal);
 //Listen for close click
-loCloseBtn.addEventListener('click', stockCloseModal);
+stockCloseBtn.addEventListener('click', stockCloseModal);
 //Listen for outside click
 window.addEventListener('click', stockClickOutside);
 
@@ -126,12 +158,12 @@ var dialysismodal = document.getElementById('dialysisModal');
 // get modal button
 var dialysis = document.getElementById('dialysis');
 //get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[3];
+var dialysisCloseBtn = document.getElementsByClassName('closeBtn')[4];
 
 //listen for a click
 dialysis.addEventListener('click', dialysisOpenModal);
 //Listen for close click
-loCloseBtn.addEventListener('click', dialysisCloseModal);
+dialysisCloseBtn.addEventListener('click', dialysisCloseModal);
 //Listen for outside click
 window.addEventListener('click', dialysisClickOutside);
 
@@ -157,12 +189,12 @@ var cpumodal = document.getElementById('cpuModal');
 // get modal button
 var cpu = document.getElementById('cpu');
 //get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[4];
+var cpuCloseBtn = document.getElementsByClassName('closeBtn')[5];
 
 //listen for a click
 cpu.addEventListener('click', cpuOpenModal);
 //Listen for close click
-loCloseBtn.addEventListener('click', cpuCloseModal);
+cpuCloseBtn.addEventListener('click', cpuCloseModal);
 //Listen for outside click
 window.addEventListener('click', cpuClickOutside);
 
@@ -188,12 +220,12 @@ var dbmodal = document.getElementById('dbModal');
 // get modal button
 var db = document.getElementById('db');
 //get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[5];
+var dbCloseBtn = document.getElementsByClassName('closeBtn')[6];
 
 //listen for a click
 db.addEventListener('click', dbOpenModal);
 //Listen for close click
-loCloseBtn.addEventListener('click', dbCloseModal);
+dbCloseBtn.addEventListener('click', dbCloseModal);
 //Listen for outside click
 window.addEventListener('click', dbClickOutside);
 
@@ -214,33 +246,4 @@ function dbClickOutside(e){
 }
 
 
-//sdmodal
-// get modal element
-var sdmodal = document.getElementById('sdModal');
-// get modal button
-var sd = document.getElementById('sd');
-//get close button
-var loCloseBtn = document.getElementsByClassName('closeBtn')[5];
 
-//listen for a click
-sd.addEventListener('click', sdOpenModal);
-//Listen for close click
-loCloseBtn.addEventListener('click', sdCloseModal);
-//Listen for outside click
-window.addEventListener('click', sdClickOutside);
-
-//Function to open open modal
-function sdOpenModal(){
-  sdmodal.style.display = 'block';
-}
-
-function sdCloseModal(){
-  sdModal.style.display = 'none'
-}
-
-function sdClickOutside(e){
-  if(e.target == sdmodal){
-    sdModal.style.display = 'none'
-  }
-
-}
