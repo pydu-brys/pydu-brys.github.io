@@ -245,5 +245,36 @@ function dbClickOutside(e){
 
 }
 
+//dbmodal
+// get modal element
+var hwcmodal = document.getElementById('hwcModal');
+// get modal button
+var hwc = document.getElementById('hwc');
+//get close button
+var hwcCloseBtn = document.getElementsByClassName('closeBtn')[7];
+
+//listen for a click
+hwc.addEventListener('click', hwcOpenModal);
+//Listen for close click
+hwcCloseBtn.addEventListener('click', hwcCloseModal);
+//Listen for outside click
+window.addEventListener('click', hwcClickOutside);
+
+//Function to open open modal
+function hwcOpenModal(){
+  hwcmodal.style.display = 'block';
+}
+
+function hwcCloseModal(){
+  hwcModal.style.display = 'none'
+}
+
+function hwcClickOutside(e){
+  if(e.target == hwcmodal){
+    hwcModal.style.display = 'none'
+  }
+
+}
+
 
 
